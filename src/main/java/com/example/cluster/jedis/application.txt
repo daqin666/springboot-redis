@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: springboot-redis
+  redis:
+    #集群配置
+    config:
+      clusterNodes:
+         - xx.xx.xxx.xxx:7001
+         - xx.xx.xxx.xxx:7002
+         - xx.xx.xxx.xxx:7003
+         - xx.xx.xxx.xxx:7004
+         - xx.xx.xxx.xxx:7005
+         - xx.xx.xxx.xxx:7006
+      connectionTimeout: 60000
+      soTimeout: 3000
+      maxAttempts: 1000
+      password: 123456

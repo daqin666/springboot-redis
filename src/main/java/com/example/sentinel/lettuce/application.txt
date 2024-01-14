@@ -1,0 +1,15 @@
+spring:
+  redis:
+    host: 192.168.8.121
+    port: 6379
+    password: enjoyitlife
+    timeout: 30000
+    lettuce:
+      pool:
+        max-active: 256
+        max-idle: 64
+        max-wait: 30000
+        min-idle: 32
+    sentinel:
+      master: mymaster
+      nodes: 192.168.8.121:26379, 192.168.8.121:26380,192.168.8.121:26381

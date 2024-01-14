@@ -1,0 +1,2 @@
+# 指定 Redisson 配置文件的位置
+redisson.config=classpath:redisson.yaml

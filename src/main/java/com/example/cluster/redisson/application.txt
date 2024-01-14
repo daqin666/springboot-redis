@@ -1,0 +1,15 @@
+spring.redis:
+  server:
+    model: 2 #1 表示单机，2 表示sentinel， 3表示cluster
+    key-prefix: ${spring.application.name}
+    singleton:
+      hostName: redis
+      port: ${port}
+      password: ${password}
+    sentinel:
+      nodes: ${ip1:port1},${ip2:port1},${ip3:port1}
+      master: redismaster
+      password: ${password}
+    cluster:
+      nodes: ${ip1:port1},${ip2:port1},${ip3:port1}
+      maxRedirects: 5
